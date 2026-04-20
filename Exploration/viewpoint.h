@@ -6,21 +6,30 @@
 #include <QGraphicsView>
 #include <QTimer>
 
+enum SceneID {
+    Scene01,
+    Scene02,
+    Scene03,
+    Scene04,
+    Scene05,
+    Scene06,
+    Scene07,
+    Scene08,
+    Scene09,
+    Scene10,
+    Scene11,
+    Scene12,
+    Scene13,
+    Scene14
+};
+
+
 class Viewpoint : public QGraphicsScene
 {
 public:
     Viewpoint();
 
-    Viewpoint scene1();
-    Viewpoint scene2();
-    Viewpoint scene3();
-    Viewpoint scene4();
-    Viewpoint scene5();
-    Viewpoint scene6();
-    Viewpoint scene7();
-    Viewpoint scene8();
-    Viewpoint scene9();
-    Viewpoint scene10();
+    void loadScene(SceneID id);
 };
 
 #endif // VIEWPOINT_H

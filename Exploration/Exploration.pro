@@ -8,6 +8,7 @@ HEADERS += \
     item.h \
     keyitem.h \
     movearrow.h \
+    profile.h \
     signinform.h \
     navclick.h \
     screenview.h \
@@ -24,6 +25,7 @@ SOURCES += \
     keyitem.cpp \
     main.cpp \
     movearrow.cpp \
+    profile.cpp \
     signinform.cpp \
     navclick.cpp \
     screenview.cpp \

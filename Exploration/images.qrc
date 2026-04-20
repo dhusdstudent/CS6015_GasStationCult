@@ -1,1 +1,27 @@
-<RCC/>
+<RCC>
+    <qresource prefix="/">
+        <file>ArrowImg01.png</file>
+        <file>ArrowImg02.png</file>
+        <file>ArrowImg03.png</file>
+        <file>Item01.png</file>
+        <file>Item02.png</file>
+        <file>Item04.png</file>
+        <file>Item05.png</file>
+        <file>Item06.png</file>
+        <file>View01.png</file>
+        <file>View02.png</file>
+        <file>View03.png</file>
+        <file>View04.png</file>
+        <file>View05.png</file>
+        <file>View06.png</file>
+        <file>View07.png</file>
+        <file>View08.png</file>
+        <file>View09.png</file>
+        <file>View10.png</file>
+        <file>View11.png</file>
+        <file>View12.png</file>
+        <file>View13.png</file>
+        <file>View14.png</file>
+        <file>Item03.png</file>
+    </qresource>
+</RCC>
