@@ -6,8 +6,6 @@
 
 Viewpoint::Viewpoint() {
 
-
-
 }
 
 Viewpoint Viewpoint::scene1(){
