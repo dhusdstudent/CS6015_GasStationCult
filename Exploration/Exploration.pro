@@ -5,14 +5,17 @@ HEADERS += \
     interactclick.h \
     interactdata.h \
     interactwindow.h \
-    item.h \
     keyitem.h \
     movearrow.h \
     profile.h \
     signinform.h \
     navclick.h \
     screenview.h \
-    viewpoint.h
+ #   movearrow.h \
+ #   keyitem.h \
+  #  viewpoint.h \
+ #   item.h
+
 
 SOURCES += \
     choice.cpp \
@@ -21,17 +24,23 @@ SOURCES += \
     interactclick.cpp \
     interactdata.cpp \
     interactwindow.cpp \
-    item.cpp \
-    keyitem.cpp \
     main.cpp \
     movearrow.cpp \
     profile.cpp \
     signinform.cpp \
     navclick.cpp \
     screenview.cpp \
-    viewpoint.cpp
+    # viewpoint.cpp \
+    # keyitem.cpp \
+    # item.cpp \
+    # movearrow.cpp
 
 QT += widgets
 
 RESOURCES += \
     images.qrc
+
+DISTFILES += \
+    images/clickWhiteclaw.png \
+    images/viewExterior.png \
+    images/viewTaquitoRoller.png

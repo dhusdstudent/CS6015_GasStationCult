@@ -1,5 +1,4 @@
-#include "signinform.h"
-#include "profile.h"
+
 #include <QLineEdit>
 #include <QPushButton>
 #include <QTextEdit>
@@ -13,6 +12,9 @@
 #include <QGroupBox>
 #include <QVBoxLayout>
 #include <QFileDialog>
+
+#include "signinform.h"
+#include "profile.h"
 
 SignInForm::SignInForm(QWidget *parent) : QWidget{parent} {
 

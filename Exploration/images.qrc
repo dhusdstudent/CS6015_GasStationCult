@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
+<<<<<<< Updated upstream
         <file>ArrowImg01.png</file>
         <file>ArrowImg02.png</file>
         <file>ArrowImg03.png</file>
@@ -23,5 +24,10 @@
         <file>View13.png</file>
         <file>View14.png</file>
         <file>Item03.png</file>
+=======
+        <file>images/viewExterior.png</file>
+        <file>images/clickWhiteclaw.png</file>
+        <file>images/viewTaquitoRoller.png</file>
+>>>>>>> Stashed changes
     </qresource>
 </RCC>
