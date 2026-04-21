@@ -8,10 +8,11 @@
 
 ScreenView::ScreenView(const QString &backgroundPath,
                        GameManager *manager,
-                       QObject *parent)
+                       QObject *parent, InteractData* defaultData)
     : QGraphicsScene(parent)
     , m_manager(manager)
     , m_backgroundPath(backgroundPath)
+    , m_defaultData(defaultData)
 {
     setSceneRect(0, 0, 908, 690);
     loadBackground();
@@ -36,6 +37,10 @@ void ScreenView::addClickable(Clickable *clickable, qreal x, qreal y)
     m_clickables.append(clickable);
     addItem(clickable);
     clickable->setPos(x, y);
+}
+
+InteractData* ScreenView::getDefaultData(){
+    return m_defaultData;
 }
 
 void ScreenView::render()

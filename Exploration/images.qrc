@@ -3,6 +3,13 @@
         <file>images/viewExterior.png</file>
         <file>images/clickWhiteclaw.png</file>
         <file>images/viewTaquitoRoller.png</file>
+        <file>images/viewCosmic.png</file>
+        <file>images/viewEmployeeDoorOpen.png</file>
+        <file>images/viewRacoons.png</file>
+        <file>images/viewSlurpyAisle.png</file>
+        <file>images/viewTaquitoWithCultist.png</file>
+        <file>images/viewToiletDoor.png</file>
+        <file>images/viewToiletDoorOpen.png</file>
     </qresource>
     <qresource prefix="/sounds">
         <file>sounds/ambience.wav</file>

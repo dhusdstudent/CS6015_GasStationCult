@@ -3,6 +3,7 @@
 
 #include <QGraphicsScene>
 #include <QList>
+#include "interactdata.h"
 
 class Clickable;
 class GameManager;
@@ -16,7 +17,8 @@ class ScreenView : public QGraphicsScene
 public:
     explicit ScreenView(const QString &backgroundPath,
                         GameManager *manager,
-                        QObject *parent = nullptr);
+                        QObject *parent = nullptr,
+                        InteractData *defaultData = nullptr);
     ~ScreenView();
 
     // Add a clickable to the scene. ScreenView takes ownership.
@@ -26,10 +28,13 @@ public:
     // Call this whenever a flag changes.
     void render();
 
+    InteractData* getDefaultData();
+
 private:
     GameManager *m_manager;             // Not owned
     QList<Clickable*> m_clickables;     // Owned
     QString m_backgroundPath;
+    InteractData *m_defaultData;
 
     void loadBackground();
 };

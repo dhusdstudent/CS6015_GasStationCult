@@ -9,6 +9,7 @@ ChoiceItem::ChoiceItem(const QString &label,
     , m_callback(callback)
 {
     setDefaultTextColor(Qt::white);
+    setTextWidth(500 - 32);
     setAcceptHoverEvents(true);
     setCursor(Qt::PointingHandCursor);
 }

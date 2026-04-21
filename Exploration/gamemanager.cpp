@@ -28,17 +28,21 @@ void GameManager::changeScreen(int id)
 
     m_currentScreenId = id;
     ScreenView *screen = m_screens[id];
+    InteractData *defaultData = screen->getDefaultData();
 
     // Move the InteractWindow into the new scene if it exists
     if (!m_interactWindow) {
         m_interactWindow = new InteractWindow(this);
-        m_interactWindow->setPos(200, 300);
+        m_interactWindow->setPos(200, 400);
     }
     screen->addItem(m_interactWindow);
     m_interactWindow->hide();
 
     screen->render();
     m_view->setScene(screen);
+
+    if(defaultData != nullptr)
+        m_interactWindow->display(defaultData);
 }
 
 void GameManager::addFlag(const QString &id)
