@@ -16,6 +16,7 @@ InteractWindow::InteractWindow(GameManager *manager, QGraphicsItem *parent)
     setZValue(10);  // Always on top
     m_textItem->setPos(16, 16);
     m_textItem->setTextWidth(W - 32);
+    m_textItem->setDefaultTextColor(Qt::white);
 }
 
 void InteractWindow::display(InteractData *data)
@@ -59,17 +60,14 @@ void InteractWindow::buildChoiceItems()
 
     const auto &choices = m_currentData->choices();
     for (int i = 0; i < choices.size(); ++i) {
-        auto *item = new QGraphicsTextItem(choices[i]->label(), this);
-        item->setDefaultTextColor(Qt::yellow);
+        // Lambda captures i by value so each item has its own index
+        auto *item = new ChoiceItem(
+            choices[i]->label(),
+            [this, i]() { onChoiceSelected(i); },
+            this
+            );
+
         item->setPos(16, 80 + i * 28);
-
-        // Capture index for the click handler
-        const int idx = i;
-        item->setAcceptHoverEvents(true);
-
-        // We'll use a simple subclass-free approach: install an event filter
-        // via a helper lambda stored per item. For now, items are clickable
-        // via GameManager's scene event handling — wire up in a follow-up.
         m_choiceItems.append(item);
     }
 }
@@ -104,6 +102,9 @@ void InteractWindow::onChoiceSelected(int index)
         break;
     case ChoiceType::CLOSE:
         hide();
+        break;
+    case ChoiceType::SCENE_CHANGE:
+        m_manager->changeScreen(choice->typeData().toInt());
         break;
     }
 }

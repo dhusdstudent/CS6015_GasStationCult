@@ -4,6 +4,7 @@
 #include <QGraphicsItem>
 #include <QGraphicsTextItem>
 #include <QList>
+#include "choiceitem.h"
 
 class InteractData;
 class GameManager;
@@ -32,11 +33,11 @@ private:
     void buildChoiceItems();
     void clearChoiceItems();
 
-    QList<QGraphicsTextItem*> m_choiceItems;
+    QList<ChoiceItem*> m_choiceItems;
     QGraphicsTextItem *m_textItem;
 
     static constexpr qreal W = 500;
-    static constexpr qreal H = 300;
+    static constexpr qreal H = 200;
 };
 
 #endif // INTERACTWINDOW_H

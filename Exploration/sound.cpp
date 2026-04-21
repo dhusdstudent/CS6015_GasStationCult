@@ -10,7 +10,7 @@ Sound::Sound(QObject * parent): QObject(parent) {
     musicPlayer->setAudioOutput(audioOutput);
 
     audioOutput->setVolume(0.5);
-    musicPlayer->setSource(QUrl::fromLocalFile("C:/images/Ambient.wav"));
+    musicPlayer->setSource(QUrl("qrc:/sounds/sounds/Ambient.wav"));
 
     loopSound();
 }

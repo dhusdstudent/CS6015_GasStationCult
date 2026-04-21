@@ -13,7 +13,7 @@ ScreenView::ScreenView(const QString &backgroundPath,
     , m_manager(manager)
     , m_backgroundPath(backgroundPath)
 {
-    setSceneRect(0, 0, 908, 510);
+    setSceneRect(0, 0, 908, 690);
     loadBackground();
 }
 
@@ -28,7 +28,7 @@ void ScreenView::loadBackground()
 {
     QImage bg(m_backgroundPath);
     if (!bg.isNull())
-        setBackgroundBrush(QBrush(bg.scaled(908, 510, Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+        setBackgroundBrush(QBrush(bg.scaled(908, 690, Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
 }
 
 void ScreenView::addClickable(Clickable *clickable, qreal x, qreal y)

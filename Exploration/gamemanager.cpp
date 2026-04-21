@@ -32,7 +32,7 @@ void GameManager::changeScreen(int id)
     // Move the InteractWindow into the new scene if it exists
     if (!m_interactWindow) {
         m_interactWindow = new InteractWindow(this);
-        m_interactWindow->setPos(200, 100);
+        m_interactWindow->setPos(200, 300);
     }
     screen->addItem(m_interactWindow);
     m_interactWindow->hide();

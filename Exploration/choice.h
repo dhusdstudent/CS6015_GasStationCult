@@ -10,7 +10,8 @@ enum class ChoiceType {
     GET,    // Add something to inventory
     FLAG,   // Set a game flag
     TALK,   // Continue to another InteractData
-    CLOSE   // Close the interact window (default/dismiss)
+    CLOSE,   // Close the interact window (default/dismiss)
+    SCENE_CHANGE
 };
 
 class Choice
