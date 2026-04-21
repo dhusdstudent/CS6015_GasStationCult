@@ -67,7 +67,7 @@ void InteractWindow::buildChoiceItems()
             this
             );
 
-        item->setPos(16, 80 + i * 28);
+        item->setPos(16, 120 + i * 28);
         m_choiceItems.append(item);
     }
 }
