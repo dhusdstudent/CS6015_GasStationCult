@@ -6,8 +6,12 @@
 #include "navclick.h"
 #include "interactdata.h"
 #include "choice.h"
+#include "sound.h"
 
 int main(int argc, char** argv){
+    Sound sound;
+    sound.playSound();
+
     QApplication app(argc, argv);
 
     QGraphicsView view;
